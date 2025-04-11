@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    </head>
+    
+    <body>
+        <header class="bg-white">
+            <nav class="flex justify-between items-center w-[90%] mx-auto">
+                <div>
+                    <img class="w-40" src="C:\Users\admin\OneDrive - Ara Institute of Canterbury\Software Dev Project\BCDE311_Ass2_NgocTruongHuyNguyen\img\Millars beach.jpg" alt="Logo">
+                </div>
+                
+                <div class="nav-links duration-500 md:static absolute md:min-h-fit  min-h-[70vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6">
+
+                        <li>
+                            <a href="" style="color: #228B22;">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Forum</a>
+                        </li>
+
+                        <li>
+                            <button class="bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]">
+                                <a href="">Donate</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-row items-center items-center gap-6">
+
+                    <a href="" >
+                        <i class="fa-brands fa-instagram text-2xl hover:text-green-500"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-facebook text-2xl hover:text-green-500"></i>
+                    </a>
+
+                    <i name="menu" class="fa-solid fa-bars text-3xl cursor-pointer md:hidden w-10 h-10 items-center justify-center relative top-[1px]" onclick="onToggleMenu(this)"></i>
+                </div>
+            </nav>
+        </header>
+        <hr class="items-center w-[90%] mx-auto bg-#228B22">
+
+        <script>
+            const navLinks = document.querySelector ('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]')
+                if (e.classList.contains('fa-bars')) {
+                    e.classList.remove('fa-bars');
+                    e.classList.add('fa-xmark');
+                } else {
+                    e.classList.remove('fa-xmark');
+                    e.classList.add('fa-bars');
+                }
+            }
+        </script>
+    </body>
+</html>
