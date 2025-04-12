@@ -10,13 +10,15 @@
     </head>
     
     <body>
+
+        <!--Navbar-->
         <header class="bg-white">
             <nav class="flex justify-between items-center w-[90%] mx-auto">
                 <div>
-                    <img class="w-40" src="C:\Users\admin\OneDrive - Ara Institute of Canterbury\Software Dev Project\BCDE311_Ass2_NgocTruongHuyNguyen\img\Millars beach.jpg" alt="Logo">
+                    <img class="w-40" src="C:\Users\admin\OneDrive - Ara Institute of Canterbury\Software Dev Project\BCDE311_Ass2_NgocTruongHuyNguyen\img\Millars beach Green.jpg" alt="Logo">
                 </div>
                 
-                <div class="nav-links duration-500 md:static absolute md:min-h-fit  min-h-[70vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <div class="nav-links z-50 bg-white/30 backdrop-blur-md backdrop-blur-md duration-500 md:static absolute md:min-h-fit mt-12 md:mt-0  min-h-[40vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                     <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6">
 
                         <li>
@@ -61,10 +63,52 @@
                 </div>
             </nav>
         </header>
-        <hr class="items-center w-[90%] mx-auto bg-#228B22">
+
+        <hr class="items-center w-[90%] mx-auto border-[#228B22] mt-4 mb-4">
+
+
+    <!--Caurosel -->
+
+    <div class="relative mx-auto mt-10 overflow-hidden rounded-xl w-[80%] md:w-full max-w-3xl">
+        <div id="carousel-images" class="flex transition-transform duration-700 ease-in-out">
+        <img src="img/Example.jpeg" class="w-full flex-shrink-0" />
+        <img src="img/Example.jpeg" class="w-full flex-shrink-0" />
+        <img src="img/Example.jpeg" class="w-full flex-shrink-0" />
+        </div>
+    
+        <!-- Navigation buttons -->
+        <button onclick="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-green-500 hover:text-white">
+        <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-green-500 hover:text-white">
+        <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div id="carousel-indicators" class="flex justify-center mt-4 gap-2">
+            <!-- Dots will be inserted dynamically -->
+        </div>
+
+    </div>
+    <!--End-->
+
+    <!--Body Paragraph Start-->
+    <div>
+        <h1 class="mb-4 mt-6 ml-2 text-3xl text-[#228B22] md:text-3xl lg:text-6xl text-center">
+            Welcome to Millars Beach Island
+        </h1>
+    </div>
+
+
+ 
 
         <script>
-            const navLinks = document.querySelector ('.nav-links')
+            const navLinks = document.querySelector ('.nav-links');
+            const images = document.querySelectorAll('#carousel-images img');
+            const indicatorsContainer = document.getElementById('carousel-indicators');
+            let currentIndex = 0;
+            const carouselImages = document.getElementById("carousel-images");
+            const totalImages = carouselImages.children.length;
+
             function onToggleMenu(e){
                 e.name = e.name === 'menu' ? 'close' : 'menu';
                 navLinks.classList.toggle('top-[9%]')
@@ -76,6 +120,52 @@
                     e.classList.add('fa-bars');
                 }
             }
+
+                        // Create dots based on number of images
+                        images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'h-3 w-3 rounded-full bg-gray-400 inline-block cursor-pointer';
+                if (index === 0) dot.classList.add('bg-green-500');
+                dot.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(dot);
+            });
+
+            function updateIndicators() {
+                const dots = indicatorsContainer.children;
+                for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-green-500');
+                dots[i].classList.add('bg-gray-400');
+                }
+                dots[currentIndex].classList.add('bg-green-500');
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                const offset = -100 * currentIndex;
+                document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
+                updateIndicators();
+            }
+
+            function showSlide(index) {
+                const offset = index * -100;
+                carouselImages.style.transform = `translateX(${offset}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                goToSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                goToSlide(currentIndex);
+            }
+
+            setInterval(nextSlide, 5000);
         </script>
     </body>
+    
+    <footer>
+
+    </footer>
 </html>
