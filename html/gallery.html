@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    </head>
+    
+    <body class="bg-[]">
+
+        <!--Navbar-->
+        <header class="bg-white">
+            <nav class="flex justify-between items-center w-[90%] mx-auto">
+                <div>
+                    <img class="w-40" src="../img/Millars beach Green.jpg" alt="Logo">
+                </div>
+                
+                <div class="nav-links z-50 bg-white/30 backdrop-blur-md backdrop-blur-md duration-500 md:static absolute md:min-h-fit mt-12 md:mt-0  min-h-[40vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6">
+
+                        <li>
+                            <a href="" style="color: #228B22;">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="../Gallery.php" style="color: #228B22;">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Forum</a>
+                        </li>
+
+                        <li>
+                            <button class="bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]">
+                                <a href="">Donate</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-row items-center items-center gap-6">
+
+                    <a href="" >
+                        <i class="fa-brands fa-instagram text-2xl hover:text-green-500"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-facebook text-2xl hover:text-green-500"></i>
+                    </a>
+
+                    <i name="menu" class="fa-solid fa-bars text-3xl cursor-pointer md:hidden w-10 h-10 items-center justify-center relative top-[1px]" onclick="onToggleMenu(this)"></i>
+                </div>
+            </nav>
+        </header>
+
+        <hr class="items-center w-[90%] mx-auto border-[#228B22] mt-4 mb-4">
+
+        <!-- Playable Box -->
+        <div onclick='playAudio()' class='cursor-pointer flex items-center justify-center gap-3 mx-auto mt-4 mb-4 p-4 border border-green-600 rounded-md bg-green-100 text-green-800 w-fit hover:bg-green-200 shadow-md'>
+            <i class='fas fa-play text-2xl'></i>
+            <span class='text-base font-medium'>Click here to play the music</span>
+        </div>
+        
+        <!-- Hidden Audio -->
+        <audio id='bgMusic'>
+            <source src='audio/your-audio-file.mp3' type='audio/mpeg'>
+        </audio>
+          
+
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-4'>
+            <div class='grid gap-4'>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg' alt=''>
+                </div>
+            </div>
+            <div class='grid gap-4'>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg' alt=''>
+                </div>
+            </div>
+            <div class='grid gap-4'>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg' alt=''>
+                </div>
+            </div>
+            <div class='grid gap-4'>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg' alt=''>
+                </div>
+                <div>
+                    <img class='h-auto max-w-full rounded-lg' src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg' alt=''>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const navLinks = document.querySelector ('.nav-links');
+            const images = document.querySelectorAll('#carousel-images img');
+            const indicatorsContainer = document.getElementById('carousel-indicators');
+            let currentIndex = 0;
+            const carouselImages = document.getElementById("carousel-images");
+            const totalImages = carouselImages.children.length;
+
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]')
+                if (e.classList.contains('fa-bars')) {
+                    e.classList.remove('fa-bars');
+                    e.classList.add('fa-xmark');
+                } else {
+                    e.classList.remove('fa-xmark');
+                    e.classList.add('fa-bars');
+                }
+            }
+
+                        // Create dots based on number of images
+                        images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'h-3 w-3 rounded-full bg-gray-400 inline-block cursor-pointer';
+                if (index === 0) dot.classList.add('bg-green-500');
+                dot.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(dot);
+            });
+
+            function updateIndicators() {
+                const dots = indicatorsContainer.children;
+                for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-green-500');
+                dots[i].classList.add('bg-gray-400');
+                }
+                dots[currentIndex].classList.add('bg-green-500');
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                const offset = -100 * currentIndex;
+                document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
+                updateIndicators();
+            }
+
+            function showSlide(index) {
+                const offset = index * -100;
+                carouselImages.style.transform = `translateX(${offset}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                goToSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                goToSlide(currentIndex);
+            }
+
+            setInterval(nextSlide, 5000);
+            // Audio
+            function playAudio() {
+                const audio = document.getElementById('bgMusic');
+                audio.play();
+            }
+
+        </script>
+    </body>
+    
+    <!-- Footer -->
+    <footer class="bg-[#228B22] text-center text-sm text-[white] py-6 mt-12">
+        &copy; Lord Family Trust &nbsp; - &nbsp; Email us at: 
+        <p class="inline  underline">millarsbeach@gmail.com</p>
+    </footer>
+</html>
