@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    </head>
+    
+    <body class="bg-[]">
+
+        <!--Navbar-->
+        <header class="bg-white">
+            <nav class="flex justify-between items-center w-[90%] mx-auto">
+                <div>
+                    <img class="w-40" src="../img/Millars beach Green.jpg" alt="Logo">
+                </div>
+                
+                <div class="nav-links z-50 bg-white/30 backdrop-blur-md backdrop-blur-md duration-500 md:static absolute md:min-h-fit mt-12 md:mt-0  min-h-[40vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6">
+
+                        <li>
+                            <a href="" style="color: #228B22;">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="../Gallery.php" style="color: #228B22;">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="" style="color: #228B22;">Forum</a>
+                        </li>
+
+                        <li>
+                            <button class="bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]">
+                                <a href="">Donate</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-row items-center items-center gap-6">
+
+                    <a href="" >
+                        <i class="fa-brands fa-instagram text-2xl hover:text-green-500"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-facebook text-2xl hover:text-green-500"></i>
+                    </a>
+
+                    <i name="menu" class="fa-solid fa-bars text-3xl cursor-pointer md:hidden w-10 h-10 items-center justify-center relative top-[1px]" onclick="onToggleMenu(this)"></i>
+                </div>
+            </nav>
+        </header>
+
+        <hr class="items-center w-[90%] mx-auto border-[#228B22] mt-4 mb-4">
+
+        <div class='flex flex-col items-center'>
+            <!-- Centered About Us -->
+            <h1 class='text-3xl md:text-4xl leading-none tracking-tight text-[#228B22]'>About Us</h1>
+            <hr class='items-center w-[50%] md:w-[45%] lg:w-[35%] border-[#228B22] mt-4 mb-4'>
+          
+            <!-- Our story aligned to left of heading above -->
+            <div class=' w-[80%] md:w-[45%] lg:w-[35%] text-left'>
+              <h2 class='text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Story</h2>
+              <p class="mt-2">
+                <li class="mb-2">
+                    Overview: Explain what the initiative is about – our mission, history, and goals.
+                </li>
+
+                <li class="mb-2">
+                    Why It’s Important: Discuss the importance of suppressing predators (like rats, cats, and possums) for preserving native wildlife, biodiversity, and the overall ecosystem of Rakiura.
+                </li>
+
+                <li>
+                    The Process: Tech and Innovation: Highlight any innovative technologies or methods being used, (e.g. AT550’s, GPS tracking, camera monitoring, or new trapping systems).
+                </li>
+              </p>
+
+              <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Vision</h2>
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+
+              <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Value</h2>
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+
+              <h2 class="mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]">Our Location</h2>
+              <div id="map" class="w-full h-[300px] mt-2 rounded-lg overflow-hidden shadow-md"></div>
+
+              <h2 class="mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]">Our Team</h2>
+              <img src="" alt="Image of all people in the teams">
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+  
+            </div>
+        </div>
+
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+        const map = L.map('map', {
+            scrollWheelZoom: true,
+            attributionControl: false
+        }).setView([-46.915999, 168.054889], 15); // your coordinates
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        L.marker([-46.915999, 168.054889]).addTo(map).bindPopup("Millars Beach").openPopup();
+        </script>
+                
+
+        
+    </body>
+    
+    <!-- Footer -->
+    <footer class="bg-[#228B22] text-center text-sm text-[white] py-6 mt-12">
+        &copy; Lord Family Trust &nbsp; - &nbsp; Email us at: 
+        <p class="inline  underline">millarsbeach@gmail.com</p>
+    </footer>
+</html>

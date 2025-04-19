@@ -6,7 +6,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     </head>
     
     <body class="bg-[]">
@@ -26,7 +27,7 @@
                         </li>
 
                         <li>
-                            <a href="" style="color: #228B22;">About Us</a>
+                            <a href="aboutUs.php" style="color: #228B22;">About Us</a>
                         </li>
 
                         <li>
@@ -170,6 +171,18 @@
                 const audio = document.getElementById('bgMusic');
                 audio.play();
             }
+        </script>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            const map = L.map('map', {
+                scrollWheelZoom: true,
+                attributionControl: false
+            }).setView([-46.915999, 168.054889], 15); // your coordinates
+        
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        
+            L.marker([-46.915999, 168.054889]).addTo(map).bindPopup("Millars Beach").openPopup();
         </script>
     </body>
     
