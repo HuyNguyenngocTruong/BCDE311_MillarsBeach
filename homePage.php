@@ -8,7 +8,7 @@
 
 
     <!--Caurosel -->
-
+<div class='w-[90%] mx-auto'>
     <div class='relative mx-auto mt-10 overflow-hidden rounded-xl w-[80%] md:w-full max-w-3xl'>
       <div id='carousel-images' class='flex transition-transform duration-700 ease-in-out'>
         <img src='img/Example.jpeg' class='w-full flex-shrink-0' />
@@ -35,10 +35,10 @@
     <!-- Form -->
   <div class='flex min-h-full flex-col justify-center px-6 py-12 lg:px-8'>
     <div class='sm:mx-auto sm:w-full sm:max-w-sm'>
-      <h2 class='mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900'>Sign up for receive news</h2>
+      <h2 class='mt-4 text-center text-2xl/9 font-bold tracking-tight text-gray-900'>Sign up for receive news</h2>
     </div>
 
-    <div class='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
+    <div class='mt-6 sm:mx-auto sm:w-full sm:max-w-sm'>
       <form class='space-y-6' action='#' method='POST'>
         <div>
           <label for='email' class='block text-sm/6 font-medium text-gray-900'>Email address</label>
@@ -57,13 +57,13 @@
   </div>
 
   <!--Body Paragraph Start-->
-  <div>
-    <h1 class='mb-4 mt-6 ml-2 text-3xl text-[#228B22] md:text-3xl lg:text-5xl text-center'>
+  <div class='w-[80%] items-center mx-auto'>
+    <h1 class='mb-4 mt-6 ml-2 text-2xl text-[#228B22] md:text-3xl lg:text-4xl text-center'>
       Welcome to Millars Beach Island
     </h1>
 
     <!--Map-->
-    <div class='w-[90%] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 mt-10 mb-5'>
+    <div class='w-[100%] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 mt-10 mb-5'>
       <div class='flex flex-col md:flex-row justify-center items-center gap-10 w-[100%] mx-auto md:w-1/2'>            
         <p class='ml-2 text-[#444444] text-base leading-relaxed text-center md:text-left'>
           The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working hard to reduce the impact of invasive species and help our local birds, plants, and marine life thrive. By managing and suppressing predators, we’re creating a more balanced ecosystem where our wildlife can flourish. 
@@ -71,14 +71,7 @@
         </p>
       </div>
 
-      <div class='w-full md:w-1/2 flex justify-center md:justify-end'>  
-        <iframe src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2725.3245921762405!2d168.05231397657496!3d-46.9159999711348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDbCsDU0JzU3LjYiUyAxNjjCsDAzJzE3LjYiRQ!5e0!3m2!1sen!2snz!4v1744445160841!5m2!1sen!2snz' 
-          width='100%' height='500' 
-          style='border:0;' 
-          allowfullscreen='' 
-          loading='lazy' 
-          referrerpolicy='no-referrer-when-downgrade'>
-        </iframe>
+      <div id = 'map' class='w-full md:w-1/2 h-[400px] flex justify-center md:justify-end'>  
       </div>
     </div>
   </div>
@@ -90,35 +83,39 @@
     </h1>
 
     <div class='w-[90%] mx-auto flex flex-row items-stretch justify-between gap-10 mt-10 mb-5'>
-      <!-- Text Block -->
+      
+    <!-- Image Block -->
+      <div class='w-[500px] h-[200px] md:w-1/2 md:h-1/2 flex justify-center items-center'>
+        <img src='img\Example.jpeg' alt='Kiwi footages' class='md:w-[80%] h-full max-h-80 object-cover rounded-lg'>
+      </div>
+
+    <!-- Text Block -->
       <div class='flex items-center w-full md:w-1/2'>
         <p class='ml-2 text-[#444444] text-base leading-relaxed text-center md:text-left'>
-          The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working hard to reduce the impact of invasive species and help our local birds, plants, and marine life thrive. 
+          The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working  
         </p>
       </div>
 
-      <!-- Image Block -->
-      <div class='w-full md:w-1/2 flex justify-center items-center'>
-        <img src='img\Example.jpeg' alt='Kiwi footages' class='md:w-[80%] h-full max-h-80 object-cover rounded-lg'>
-      </div>
     </div>
   </div>
 
   <div>
     <div class='w-[90%] mx-auto flex flex-row items-stretch justify-between gap-10 mt-10 mb-5'>       
-      <!-- Image Block -->
-      <div class='w-full md:w-1/2 flex justify-center items-center'>
-        <img src='img\Example.jpeg' alt='Kiwi footages' class='w-full md:w-[80%] h-full max-h-80 object-cover rounded-lg'>
-      </div>
-
+      
       <!-- Text Block -->
       <div class='flex items-center w-full md:w-1/2'>
         <p class='ml-2 text-[#444444] text-base leading-relaxed text-center md:text-left'>
-          The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working hard to reduce the impact of invasive species and help our local birds, plants, and marine life thrive. 
+          The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working  
         </p>
       </div>
+      <!-- Image Block -->
+      <div class='w-[500px] h-[200px] md:w-1/2 md:h-1/2 flex justify-center items-center'>
+        <img src='img\Example.jpeg' alt='Kiwi footages' class='w-full md:w-[80%] h-full max-h-80 object-cover rounded-lg'>
+      </div>
+
     </div>
   </div>
+</div>
 ";
 
 
