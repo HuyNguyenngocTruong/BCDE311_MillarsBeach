@@ -6,7 +6,7 @@
     
     $content = "
       <div class='flex flex-col items-center'>
-  <h1 class='capitalize text-3xl md:text-4xl leading-none tracking-tight text-[#228B22]'>Donate for helping project</h1>
+  <h1 class='capitalize text-3xl md:text-4xl mt-6 leading-none tracking-tight text-[#228B22]'>Donate for helping project</h1>
   <button class='mt-6 bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]'>
     <a href=''>Donate Now</a>
   </button>

@@ -30,8 +30,6 @@
     </div>
     <!--End-->
 
-
-
     <!-- Form -->
   <div class='flex min-h-full flex-col justify-center px-6 py-12 lg:px-8'>
     <div class='sm:mx-auto sm:w-full sm:max-w-sm'>
@@ -65,7 +63,7 @@
     <!--Map-->
     <div class='w-[100%] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 mt-10 mb-5'>
       <div class='flex flex-col md:flex-row justify-center items-center gap-10 w-[100%] mx-auto md:w-1/2'>            
-        <p class='ml-2 text-[#444444] text-base leading-relaxed text-center md:text-left'>
+        <p class='ml-2 text-[#444444] text-base leading-relaxed text-left md:text-left'>
           The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working hard to reduce the impact of invasive species and help our local birds, plants, and marine life thrive. By managing and suppressing predators, we’re creating a more balanced ecosystem where our wildlife can flourish. 
           With the support of our awesome community, and environmental partners this project is all about protecting Millars Beach and its natural, vibrant self—so we can all enjoy its unique beauty for years to come!
         </p>
@@ -91,7 +89,7 @@
 
     <!-- Text Block -->
       <div class='flex items-center w-full md:w-1/2'>
-        <p class='ml-2 text-[#444444] text-base leading-relaxed text-center md:text-left'>
+        <p class='ml-2 text-[#444444] text-base leading-relaxed text-left md:text-left'>
           The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working  
         </p>
       </div>
@@ -104,7 +102,7 @@
       
       <!-- Text Block -->
       <div class='flex items-center w-full md:w-1/2'>
-        <p class='ml-2 text-[#444444] text-base leading-relaxed text-center md:text-left'>
+        <p class='ml-2 text-[#444444] text-base leading-relaxed text-left md:text-left'>
           The Millars Beach Restoration Project is all about giving our native wildlife a fighting chance by keeping pesky predators in check! We’re working  
         </p>
       </div>
