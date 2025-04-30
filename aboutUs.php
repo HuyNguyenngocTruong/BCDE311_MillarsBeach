@@ -8,10 +8,9 @@
     <div class='flex flex-col items-center'>
   <!-- Centered About Us -->
   <h1 class='text-3xl mt-6 md:text-4xl leading-none tracking-tight text-[#228B22]'>About Us</h1>
-  <hr class='items-center w-[50%] md:w-[45%] lg:w-[35%] border-[#228B22] mt-4 mb-4'>
 
   <!-- Our story aligned to left of heading above -->
-  <div class='w-[80%] md:w-[45%] lg:w-[35%] text-left'>
+  <div class='w-[80%] md:w-[45%] lg:w-[35%] text-left mt-5'>
     <h2 class='text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Story</h2>
     <p class='mt-2'>
       <li class='mb-2'>
