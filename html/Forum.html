@@ -11,128 +11,49 @@
     </head>
     
     <body class="bg-[]">
-
-        <!--Navbar-->
-        <header class="bg-white">
-            <nav class="flex justify-between items-center w-[90%] mx-auto">
-                <div>
-                    <img class="w-40" src="../img/Millars beach Green.jpg" alt="Logo">
-                </div>
-                
-                <div class="nav-links z-50 bg-white/30 backdrop-blur-md backdrop-blur-md duration-500 md:static absolute md:min-h-fit mt-12 md:mt-0  min-h-[40vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6">
-
-                        <li>
-                            <a href="" style="color: #228B22;">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="" style="color: #228B22;">About Us</a>
-                        </li>
-
-                        <li>
-                            <a href="../Gallery.php" style="color: #228B22;">Gallery</a>
-                        </li>
-
-                        <li>
-                            <a href="" style="color: #228B22;">Contact</a>
-                        </li>
-
-                        <li>
-                            <a href="" style="color: #228B22;">Forum</a>
-                        </li>
-
-                        <li>
-                            <button class="bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]">
-                                <a href="">Donate</a>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row items-center items-center gap-6">
-
-                    <a href="" >
-                        <i class="fa-brands fa-instagram text-2xl hover:text-green-500"></i>
-                    </a>
-
-                    <a href="">
-                        <i class="fa-brands fa-facebook text-2xl hover:text-green-500"></i>
-                    </a>
-
-                    <i name="menu" class="fa-solid fa-bars text-3xl cursor-pointer md:hidden w-10 h-10 items-center justify-center relative top-[1px]" onclick="onToggleMenu(this)"></i>
-                </div>
-            </nav>
-        </header>
-
-        <hr class="items-center w-[90%] mx-auto border-[#228B22] mt-4 mb-4">
-
-        <div class='flex flex-col items-center'>
-            <h1 class='capitalize text-3xl md:text-4xl leading-none tracking-tight text-[#228B22]'>Donate for helping project</h1>
-            <button class="mt-6 bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]">
-                <a href="">Donate Now</a>
-            </button>
-
-            <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
-                <!-- Total Raised -->
-                <div class="text-center">
-                  <h2 class="text-gray-600 text-sm">We’ve raised</h2>
-                  <p class="text-3xl font-bold text-gray-800">$10.000</p>
-                  <p class="text-gray-600 text-sm">Of our target <span class="font-semibold">$50,000</span></p>
-                  <div class="w-full bg-gray-200 rounded-full h-2.5 mt-4">
-                    <div class="bg-blue-900 h-2.5 rounded-full" style="width: 40.7%;"></div>
-                  </div>
-                </div>
-              
-                <!-- Stats Grid -->
-                <div class="grid text-center mt-6 text-sm text-gray-700">
-                    <div class="flex items-center justify-center gap-x-4">
-                      <!-- Icon -->
-                      <i class="fa-solid fa-hand-holding-dollar text-3xl "></i>
-                  
-                      <!-- Number + Label -->
-                      <div class="text-left">
-                        <div class="text-2xl font-semibold">1,035</div>
-                        <p>Donations</p>
-                      </div>
-                    </div>
-                </div>
-                  
-              
-                <!-- Search -->
-                <div class="mt-4">
-                  <input type="text" placeholder="Find a fundraiser"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-              
-                <!-- Leaderboard List -->
-                <ul class="mt-6 space-y-4">
-                  <li class="flex items-center justify-between">
-                    <div class="flex items-center space-x-3">
-                      <span class="text-sm font-medium text-gray-600">1.</span>
-                      <img src="" alt="avatar" class="w-10 h-10 rounded-full">
-                      <span class="text-gray-800">Name</span>
-                    </div>
-                    <span class="font-semibold text-gray-800">$3,297.15</span>
-                  </li>
-              
-                  <li class="flex items-center justify-between">
-                    <div class="flex items-center space-x-3">
-                      <span class="text-sm font-medium text-gray-600">2.</span>
-                      <img src="" alt="avatar" class="w-10 h-10 rounded-full">
-                      <span class="text-gray-800">Name</span>
-                    </div>
-                    <span class="font-semibold text-gray-800">$2,316.70</span>
-                  </li>
-              
-                  <!-- Add more list items as needed -->
-                </ul>
-              </div>
-              
-        </div>
-                
-
+        <div class="flex flex-col items-center mt-10 px-4">
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#228B22] mb-6">Community Posts</h2>
         
+            <div class="space-y-6 w-full max-w-2xl">
+        
+                <!-- Post 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md space-y-4">
+                    <img src="uploads/forest.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg border border-gray-300 dark:border-gray-600" />
+                    <p class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">
+                        Took this shot while hiking near Millars Beach. It's amazing to see how restoration efforts are paying off!
+                    </p>
+                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
+                        Posted by <span class="font-semibold">NatureLover88</span> on April 29, 2025
+                    </div>
+                </div>
+        
+                <!-- Post 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md space-y-4">
+                    <img src="uploads/clean_up.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg border border-gray-300 dark:border-gray-600" />
+                    <p class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">
+                        We organized a beach cleanup last weekend! Proud of the team — here’s a photo of some of the collected waste.
+                    </p>
+                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
+                        Posted by <span class="font-semibold">EcoWarrior</span> on April 28, 2025
+                    </div>
+                </div>
+        
+                <!-- Post 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md space-y-4">
+                    <img src="uploads/seedlings.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg border border-gray-300 dark:border-gray-600" />
+                    <p class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">
+                        Just planted 200+ native seedlings! Can’t wait to see them thrive in a few years 🌱
+                    </p>
+                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
+                        Posted by <span class="font-semibold">GreenThumb</span> on April 27, 2025
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+                 
     </body>
     
     <!-- Footer -->

@@ -5,7 +5,7 @@ function getConnection() {
 	$host = 'localhost' ;
 	$dbUser ='root';
 	$dbPass ='Truonghuy2212&';
-	$dbName ='agoraDatabase';
+	$dbName ='AgoraDatabase';
 
     // create a new database object and connect to server
 	$db = new MySQL($host, $dbUser, $dbPass, $dbName);

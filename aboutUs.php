@@ -32,9 +32,16 @@
 
     <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Value</h2>
     <p class='mt-2'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      The vision started with Lindsay and Joy Lord purchasing the 100Ha peninsula in the early 1970's. They have now passed on their love of this wild and beautiful place to their children and grandchildren. We're now seeking to restore it to be a place where native birdlife, 
+      flora and fauna thrive for their great-grandchildren and visitors to experience; birds like our resident Kiwi population and our Tui, Korora, Kaka and Kakariki.   
+
     </p>
+
+    <p class='mt-1'>
+      In early October 2023 we initiated Phase 1 of 3 on the eastern-most third of the peninsula - monitoring, trapping and baiting. This includes a core defence line of automatic traps that continue to operate. We are currently working on expanding into the remainder of the peninsula. 
+      Your partnership and support will enable the restoration to expand in a way that's both targeted and sustainable.
+    </p>
+    
 
     <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Location</h2>
     <div id='map' class='w-full h-[300px] mt-2 rounded-lg overflow-hidden shadow-md'></div>

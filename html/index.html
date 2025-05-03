@@ -7,7 +7,10 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
+        <style>
+            body { font-family: 'Open Sans', sans-serif; }
+            h1, h2 { font-family: 'Libre Baskerville', serif; }
+        </style>
     </head>
     
     <body class="bg-[]">
@@ -42,7 +45,7 @@
                             <a href="Donate.php" class="text-green-900 hover:text-green-600 duration-300">Donate</a>
                         </li>
                         <li>
-                            <a href="login.php" class="text-green-900 hover:text-green-600 duration-300">Login</a>
+                            <a href="login.php" class="text-green-900 hover:text-green-600 duration-300">##login##</a>
                         </li>
 
                     </ul>
@@ -181,8 +184,37 @@
     </body>
     
     <!-- Footer -->
-    <footer class="bg-[#228B22] text-center text-sm text-[white] py-6 mt-12">
-        &copy; Lord Family Trust &nbsp; - &nbsp; Email us at: 
-        <p class="inline  underline">millarsbeach@gmail.com</p>
-    </footer>
+    <footer class="bg-black text-white py-12 mt-12">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+      
+          <!-- Shared width container -->
+          <div class="max-w-md mx-auto space-y-4">
+            <h2 class="text-2xl font-semibold">Stay Informed</h2>
+            <p class="text-sm text-gray-300">
+              Subscribe to get the latest news, updates, and opportunities from Millars Beach.
+            </p>
+      
+            <form class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#228B22] w-full" />
+      
+              <button 
+                type="submit" 
+                class="bg-[#228B22] hover:bg-green-600 px-6 py-2 rounded-md text-white font-semibold transition duration-300">
+                Subscribe
+              </button>
+            </form>
+          </div>
+      
+          <p class="text-xs md:text-sm text-gray-400 mt-6">
+            &copy; Lord Family Trust — 
+            <a href="#" class="underline">millarsbeach@gmail.com</a>
+          </p>
+      
+        </div>
+      </footer>
+      
+    
 </html>

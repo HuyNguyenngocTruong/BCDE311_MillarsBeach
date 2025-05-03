@@ -48,6 +48,76 @@
             </p>
             </div>
         </div>
+
+        
+        <script>
+            const navLinks = document.querySelector ('.nav-links');
+            const images = document.querySelectorAll('#carousel-images img');
+            const indicatorsContainer = document.getElementById('carousel-indicators');
+            let currentIndex = 0;
+            const carouselImages = document.getElementById("carousel-images");
+            const totalImages = carouselImages.children.length;
+
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]')
+                if (e.classList.contains('fa-bars')) {
+                    e.classList.remove('fa-bars');
+                    e.classList.add('fa-xmark');
+                } else {
+                    e.classList.remove('fa-xmark');
+                    e.classList.add('fa-bars');
+                }
+            }
+
+                        // Create dots based on number of images
+                        images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'h-3 w-3 rounded-full bg-gray-400 inline-block cursor-pointer';
+                if (index === 0) dot.classList.add('bg-green-500');
+                dot.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(dot);
+            });
+
+            function updateIndicators() {
+                const dots = indicatorsContainer.children;
+                for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-green-500');
+                dots[i].classList.add('bg-gray-400');
+                }
+                dots[currentIndex].classList.add('bg-green-500');
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                const offset = -100 * currentIndex;
+                document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
+                updateIndicators();
+            }
+
+            function showSlide(index) {
+                const offset = index * -100;
+                carouselImages.style.transform = `translateX(${offset}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                goToSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                goToSlide(currentIndex);
+            }
+
+            setInterval(nextSlide, 5000);
+
+            // Audio
+            function playAudio() {
+                const audio = document.getElementById('bgMusic');
+                audio.play();
+            }
+        </script>
     
 
     </body>

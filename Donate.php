@@ -8,7 +8,7 @@
       <div class='flex flex-col items-center'>
   <h1 class='capitalize text-3xl md:text-4xl mt-6 leading-none tracking-tight text-[#228B22]'>Donate for helping project</h1>
   <button class='mt-6 bg-[#228B22] text-white px-5 py-2 hover:bg-[#a6c1ee]'>
-    <a href=''>Donate Now</a>
+    <a href='https://giveatrap.org.nz/groups/millars-beach-restoration-project'>Donate Now</a>
   </button>
 
   <div class='max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6'>

@@ -62,28 +62,19 @@ class MasterPage {
     public function logout() {
         $this->userID = null;
         $this->userName = null;
-        $this->role = null;
         session_destroy();
     }
     
     private function getLoginPanel() {
         if ($this->userID == null) {
-            return '<li><a href="login.php">Login</a></li>';
+            return '<a href="login.php" class="text-green-900 hover:text-green-600 duration-300">Login</a>';
         }
 
         // Generate role-specific login information
-        $html = '<span class="login">Logged in as <em>' . $this->userName . '</em>';
+        $html = '<span class="login">Logged in as <em>' . $this->userName . '</em></span>';
         
-        if ($this->role == 'business') {
-            $html .= ' (Business)';
-        } elseif ($this->role == 'seller') {
-            $html .= ' (Seller)';
-           
-        } elseif ($this->role == 'buyer') {
-            $html .= ' (Buyer)';
-        }
-
-        $html .= '<li><a href="logout.php">Logout</a></li>';
+        $html .= '<a href="logout.php" class="text-green-900 hover:text-green-600 duration-300">Log out</a>';
+        $html .= '<a href="CreatePost.html" class="text-green-900 hover:text-green-600 duration-300">Create a post</a>';
         $html .= '</span>';
         
         return $html;
