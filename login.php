@@ -25,7 +25,7 @@ require_once 'siteFunctions/masterPage.php';
 	$login=new HtmlTemplate('login.html');
 	$content=$login->getHtml(array());	
 	if ($error!=null) {
-		$content.='<br/><br/><p class="LoginFail">'.$error.'<p><br/>';
+		$content.='<br/><br/><p class="LoginFail">'.$error.'</p><br/>';
 	}
 
 	$pg->setTitle('User Login');

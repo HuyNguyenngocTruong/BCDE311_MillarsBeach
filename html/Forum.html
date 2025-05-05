@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <title>Community Posts</title>
+</head>
 
-    </head>
-    
-    <body class="bg-[]">
-        <div class="flex flex-col items-center mt-10 px-4">
-            <h2 class="text-2xl md:text-3xl font-semibold text-[#228B22] mb-6">Community Posts</h2>
-        
-            <div class="space-y-6 w-full max-w-2xl">
-        
-                <!-- Post 1 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md space-y-4">
-                    <img src="uploads/forest.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg border border-gray-300 dark:border-gray-600" />
-                    <p class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">
-                        Took this shot while hiking near Millars Beach. It's amazing to see how restoration efforts are paying off!
-                    </p>
-                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
-                        Posted by <span class="font-semibold">NatureLover88</span> on April 29, 2025
-                    </div>
-                </div>
-        
-                <!-- Post 2 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md space-y-4">
-                    <img src="uploads/clean_up.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg border border-gray-300 dark:border-gray-600" />
-                    <p class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">
-                        We organized a beach cleanup last weekend! Proud of the team — here’s a photo of some of the collected waste.
-                    </p>
-                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
-                        Posted by <span class="font-semibold">EcoWarrior</span> on April 28, 2025
-                    </div>
-                </div>
-        
-                <!-- Post 3 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md space-y-4">
-                    <img src="uploads/seedlings.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg border border-gray-300 dark:border-gray-600" />
-                    <p class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">
-                        Just planted 200+ native seedlings! Can’t wait to see them thrive in a few years 🌱
-                    </p>
-                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
-                        Posted by <span class="font-semibold">GreenThumb</span> on April 27, 2025
-                    </div>
-                </div>
-        
-            </div>
+<body class="bg-gray-100 text-gray-800">
+  <div class="flex flex-col items-center mt-10 px-4">
+    <div class="w-full max-w-5xl">
+      <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+        <h2 class="text-2xl md:text-3xl font-semibold text-[#228B22] mb-4 md:mb-0 text-center md:text-left">
+          Community Posts
+        </h2>
+        <button class="bg-[#228B22] text-white px-5 py-2 rounded-full hover:bg-green-700 transition">
+          <i class="fas fa-plus mr-2"></i>Create New Post
+        </button>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Post 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img src="uploads/forest.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg mb-4 border border-gray-300" />
+          <p class="text-sm leading-relaxed mb-2">
+            Took this shot while hiking near Millars Beach. It's amazing to see how restoration efforts are paying off!
+          </p>
+          <div class="text-right text-xs text-gray-500">
+            Posted by <span class="font-semibold">NatureLover88</span> on April 29, 2025
+          </div>
         </div>
-        
-        
-                 
-    </body>
-    
-    <!-- Footer -->
-    <footer class="bg-[#228B22] text-center text-sm text-[white] py-6 mt-12">
-        &copy; Lord Family Trust &nbsp; - &nbsp; Email us at: 
-        <p class="inline  underline">millarsbeach@gmail.com</p>
-    </footer>
+
+        <!-- Post 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img src="uploads/clean_up.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg mb-4 border border-gray-300" />
+          <p class="text-sm leading-relaxed mb-2">
+            We organized a beach cleanup last weekend! Proud of the team — here’s a photo of some of the collected waste.
+          </p>
+          <div class="text-right text-xs text-gray-500">
+            Posted by <span class="font-semibold">EcoWarrior</span> on April 28, 2025
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img src="uploads/seedlings.jpg" alt="Post image" class="w-full max-h-64 object-cover rounded-lg mb-4 border border-gray-300" />
+          <p class="text-sm leading-relaxed mb-2">
+            Just planted 200+ native seedlings! Can’t wait to see them thrive in a few years 🌱
+          </p>
+          <div class="text-right text-xs text-gray-500">
+            Posted by <span class="font-semibold">GreenThumb</span> on April 27, 2025
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#228B22] text-center text-sm text-white py-6 mt-12">
+    &copy; Lord Family Trust &nbsp; - &nbsp; Email us at:
+    <p class="inline underline">millarsbeach@gmail.com</p>
+  </footer>
+</body>
 </html>

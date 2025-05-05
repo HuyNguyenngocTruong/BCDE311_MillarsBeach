@@ -74,7 +74,6 @@ class MasterPage {
         $html = '<span class="login">Logged in as <em>' . $this->userName . '</em></span>';
         
         $html .= '<a href="logout.php" class="text-green-900 hover:text-green-600 duration-300">Log out</a>';
-        $html .= '<a href="CreatePost.html" class="text-green-900 hover:text-green-600 duration-300">Create a post</a>';
         $html .= '</span>';
         
         return $html;

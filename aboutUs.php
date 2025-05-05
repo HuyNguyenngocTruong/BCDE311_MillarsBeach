@@ -4,58 +4,83 @@
 	require_once 'framework/htmlTemplate.php';
     $page = new MasterPage();
     
-    $content = "
-    <div class='flex flex-col items-center'>
-  <!-- Centered About Us -->
-  <h1 class='text-3xl mt-6 md:text-4xl leading-none tracking-tight text-[#228B22]'>About Us</h1>
-
-  <!-- Our story aligned to left of heading above -->
-  <div class='w-[80%] md:w-[45%] lg:w-[35%] text-left mt-5'>
-    <h2 class='text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Story</h2>
-    <p class='mt-2'>
-      <li class='mb-2'>
-        Overview: Explain what the initiative is about – our mission, history, and goals.
-      </li>
-      <li class='mb-2'>
-        Why It’s Important: Discuss the importance of suppressing predators (like rats, cats, and possums) for preserving native wildlife, biodiversity, and the overall ecosystem of Rakiura.
-      </li>
-      <li>
-        The Process: Tech and Innovation: Highlight any innovative technologies or methods being used, (e.g. AT550’s, GPS tracking, camera monitoring, or new trapping systems).
-      </li>
-    </p>
-
-    <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Vision</h2>
-    <p class='mt-2'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-
-    <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Value</h2>
-    <p class='mt-2'>
-      The vision started with Lindsay and Joy Lord purchasing the 100Ha peninsula in the early 1970's. They have now passed on their love of this wild and beautiful place to their children and grandchildren. We're now seeking to restore it to be a place where native birdlife, 
-      flora and fauna thrive for their great-grandchildren and visitors to experience; birds like our resident Kiwi population and our Tui, Korora, Kaka and Kakariki.   
-
-    </p>
-
-    <p class='mt-1'>
-      In early October 2023 we initiated Phase 1 of 3 on the eastern-most third of the peninsula - monitoring, trapping and baiting. This includes a core defence line of automatic traps that continue to operate. We are currently working on expanding into the remainder of the peninsula. 
-      Your partnership and support will enable the restoration to expand in a way that's both targeted and sustainable.
-    </p>
+    $content = '
+    <div class="flex flex-col items-center">
+      <div class="w-[80%] md:w-[45%] lg:w-[35%] text-left mt-5">
+    
+        <!-- Our Story -->
+        <section>
+          <h2 class="text-2xl md:text-3xl leading-none tracking-tight text-[#228B22] text-center mb-4">Our Story</h2>
+          <ul class="mt-2 list-disc pl-5">
+            <li class="mb-2">
+              <strong>Overview:</strong> Explain what the initiative is about – our mission, history, and goals.
+            </li>
+            <li class="mb-2">
+              <strong>Why It’s Important:</strong> Discuss the importance of suppressing predators (like rats, cats, and possums) for preserving native wildlife, biodiversity, and the overall ecosystem of Rakiura.
+            </li>
+            <li>
+              <strong>The Process: Tech and Innovation:</strong> Highlight any innovative technologies or methods being used (e.g., AT550’s, GPS tracking, camera monitoring, or new trapping systems).
+            </li>
+          </ul>
+        </section>
+    
+        <!-- Our Mission -->
+        <section class="w-full px-4 py-12 bg-white">
+          <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+              <h2 class="text-2xl md:text-3xl text-[#228B22] text-center mb-4">Our Mission</h2>
+              <div class="w-14 h-1 bg-green-600 mx-auto lg:mx-0 mb-4"></div>
+              <p>
+                To conserve the lands and waters on which all life depends.
+              </p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="img/Mission.jpg" alt="Mission Illustration" class="w-full max-w-md mx-auto">
+            </div>
+          </div>
+        </section>
+    
+        <!-- Our Vision -->
+        <section class="w-full px-4 py-12 bg-white">
+          <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+            <div class="lg:w-1/2">
+              <img src="img/Vison.jpg" alt="Vision Illustration" class="w-full max-w-md mx-auto">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+              <h2 class="text-2xl md:text-3xl text-[#228B22] text-center mb-4">Our Vision</h2>
+              <div class="w-14 h-1 bg-green-600 mx-auto lg:mx-0 mb-4"></div>
+              <p>
+                A world where the diversity of life thrives, and people act to conserve nature for its own sake and its ability to fulfill our needs and enrich our lives.
+              </p>
+              <a href="#priorities" class="text-green-700 font-semibold underline">See Our Priorities</a>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Our Location -->
+        <section class="mt-8">
+          <h2 class="text-2xl md:text-3xl leading-none tracking-tight text-[#228B22] text-center mb-4">Our Location</h2>
+          <div id="map" class="w-full h-[300px] mt-2 rounded-lg overflow-hidden shadow-md"></div>
+        </section>
+    
+        <!-- Our Team -->
+        <section class="mt-8">
+          <h2 class="text-2xl md:text-3xl leading-none tracking-tight text-[#228B22] text-center mb-4">Our Team</h2>
+          <img src="" alt="Image of all people in the teams" class="mt-2">
+          <p class="mt-2 text-justify leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+    
+      </div>
+    </div>
+    ';
+    
     
 
-    <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Location</h2>
-    <div id='map' class='w-full h-[300px] mt-2 rounded-lg overflow-hidden shadow-md'></div>
-
-    <h2 class='mt-3 text-2xl md:text-3xl leading-none tracking-tight text-[#333333]'>Our Team</h2>
-    <img src='' alt='Image of all people in the teams'>
-    <p class='mt-2'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </div>
-</div>
-
-    ";
 
     $page->setTitle('About Us');
 	$page->setContent($content);	

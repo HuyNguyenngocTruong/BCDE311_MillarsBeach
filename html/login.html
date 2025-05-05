@@ -7,17 +7,20 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
+        <style>
+            body { font-family: 'Open Sans', sans-serif; }
+            h1, h2 { font-family: 'Libre Baskerville', serif; }
+        </style>
     </head>
     <body>
 
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+            <h2 class="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
             </div>
         
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="#" method="POST">
+            <form class="space-y-6" action="login.php" method="POST">
                 <div>
                 <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
                 <div class="mt-2">
@@ -49,76 +52,6 @@
             </div>
         </div>
 
-        
-        <script>
-            const navLinks = document.querySelector ('.nav-links');
-            const images = document.querySelectorAll('#carousel-images img');
-            const indicatorsContainer = document.getElementById('carousel-indicators');
-            let currentIndex = 0;
-            const carouselImages = document.getElementById("carousel-images");
-            const totalImages = carouselImages.children.length;
-
-            function onToggleMenu(e){
-                e.name = e.name === 'menu' ? 'close' : 'menu';
-                navLinks.classList.toggle('top-[9%]')
-                if (e.classList.contains('fa-bars')) {
-                    e.classList.remove('fa-bars');
-                    e.classList.add('fa-xmark');
-                } else {
-                    e.classList.remove('fa-xmark');
-                    e.classList.add('fa-bars');
-                }
-            }
-
-                        // Create dots based on number of images
-                        images.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.className = 'h-3 w-3 rounded-full bg-gray-400 inline-block cursor-pointer';
-                if (index === 0) dot.classList.add('bg-green-500');
-                dot.addEventListener('click', () => goToSlide(index));
-                indicatorsContainer.appendChild(dot);
-            });
-
-            function updateIndicators() {
-                const dots = indicatorsContainer.children;
-                for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove('bg-green-500');
-                dots[i].classList.add('bg-gray-400');
-                }
-                dots[currentIndex].classList.add('bg-green-500');
-            }
-
-            function goToSlide(index) {
-                currentIndex = index;
-                const offset = -100 * currentIndex;
-                document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
-                updateIndicators();
-            }
-
-            function showSlide(index) {
-                const offset = index * -100;
-                carouselImages.style.transform = `translateX(${offset}%)`;
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % images.length;
-                goToSlide(currentIndex);
-            }
-
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                goToSlide(currentIndex);
-            }
-
-            setInterval(nextSlide, 5000);
-
-            // Audio
-            function playAudio() {
-                const audio = document.getElementById('bgMusic');
-                audio.play();
-            }
-        </script>
-    
 
     </body>
 
