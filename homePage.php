@@ -45,7 +45,7 @@ $content = "
       </p>
     </div>
 
-    <div id='map' class='w-full md:w-1/2 h-[400px] flex justify-center md:justify-end'></div>
+    <div id='map' class='w-full md:w-1/2 z-1 h-[400px] flex justify-center md:justify-end'></div>
   </div>
 </section>
 
