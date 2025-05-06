@@ -52,7 +52,7 @@ $content = "
 <!-- Signature Wildlife Section -->
 <section class='mt-10'>
   <h1 class='mb-6 text-2xl text-[#228B22] md:text-3xl lg:text-4xl text-center'>
-    Signature Wildlife of Millars Beach Island
+    Signature Wildlife 
   </h1>
 
   <div class='w-[90%] mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>

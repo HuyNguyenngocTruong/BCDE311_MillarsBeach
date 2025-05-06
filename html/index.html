@@ -18,7 +18,7 @@
         <!-- Navbar -->
          
         <header class="flex shadow-lg py-4 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide relative z-50">
-            <div class="flex flex-wrap items-center justify-between gap-4 w-full">
+            <div class="flex flex-wrap items-center justify-between gap:2 md:gap-4 w-full">
               <!-- Use flex to vertically center the logo -->
                 <a href="javascript:void(0)" class="hidden lg:flex items-center justify-center">
                     <img src="img/Millars beach Green.jpg" class="w-36" alt="Millars Beach Logo" />
@@ -26,7 +26,7 @@
                 
                 <!-- Mobile version -->
                 <a href="javascript:void(0)" class="block lg:hidden">
-                    <img src="img/Millars beach Green.jpg" class="w-25" alt="Millars Beach Logo" />
+                    <img src="img/Millars beach Green.jpg" class="w-20" alt="Millars Beach Logo" />
                 </a>
   
       
@@ -57,7 +57,16 @@
                   <li><a href="contactUs.php" class="hover:text-[#228B22] text-[#222222] block font-extrabold text-[15px]">Contact</a></li>
                   <li><a href="Forum.php" class="hover:text-[#228B22] text-[#222222] block font-extrabold text-[15px]">Forum</a></li>
                   <li><a href="Donate.php" class="hover:text-[#228B22] text-[#222222] block font-extrabold text-[15px]">Donate</a></li>
-
+                  <!-- <li class="hidden">
+                    <a href="">
+                        <i class="fa-brands fa-instagram text-2xl text-green-900 hover:text-[#B134AF]"></i>
+                    </a>
+                  </li>
+                  <li class="hidden sm:block">
+                    <a href="" >
+                        <i class="fa-brands fa-facebook text-2xl text-green-900 hover:text-blue-500"></i>
+                    </a>
+                 </li>   -->
                 </ul>
 
               </div>
@@ -72,12 +81,13 @@
                   up</a>
                 </button>
 
-                <a href="">
+                <a href="" class="hidden md:block">
                     <i class="fa-brands fa-instagram text-2xl text-green-900 hover:text-[#B134AF]"></i>
-                  </a>
-                  <a href="">
+                </a>
+
+                <a href="" class="hidden md:block">
                     <i class="fa-brands fa-facebook text-2xl text-green-900 hover:text-blue-500"></i>
-                  </a>
+                </a>
       
                 <button id="toggleOpen" class="lg:hidden">
                   <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +223,7 @@
     
     <!-- Footer -->
     <footer class="bg-black text-white py-12 mt-12">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+        <div class="max-w-4xl mx-auto px-6 text-left space-y-4">
       
           <!-- Shared width container -->
           <div class="max-w-md mx-auto space-y-4">
@@ -227,16 +237,37 @@
                 type="email" 
                 placeholder="Enter your email" 
                 class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#228B22] w-full" />
-      
+
               <button 
                 type="submit" 
                 class="bg-[#228B22] hover:bg-green-600 px-6 py-2 rounded-md text-white font-semibold transition duration-300">
                 Subscribe
               </button>
+
             </form>
           </div>
+
+          <div class="max-w-md mx-auto">
+            <hr class="border-white" />
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex justify-center space-x-6 text-white text-xl">
+                <a href="#" class="mr-1"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-threads"></i></a>
+          </div>
+
+          <div class="max-w-md mx-auto">
+            <hr class="border-white" />
+          </div>
+
       
-          <p class="text-xs md:text-sm text-gray-400 mt-6">
+          <p class="text-s md:text-m text-gray-400 text-center mt-6">
             &copy; Lord Family Trust — 
             <a href="#" class="underline">millarsbeach@gmail.com</a>
           </p>
