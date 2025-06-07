@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "geometry": { "type": "Point", "coordinates": [168.045561927178, -46.920167801252795] }, "properties": { "traps": 0, "kill_count": 0 } },
+    { "geometry": { "type": "Point", "coordinates": [168.045561927178, -46.918371195042] }, "properties": { "traps": 0, "kill_count": 0 } },
+    { "geometry": { "type": "Point", "coordinates": [168.04789751525203, -46.916574588831196] }, "properties": { "traps": 0, "kill_count": 0 } },
+    { "geometry": { "type": "Point", "coordinates": [168.04789751525203, -46.920167801252795] }, "properties": { "traps": 1, "kill_count": 1, "species": { "Possum": 1 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05490427947416, -46.920167801252795] }, "properties": { "traps": 1, "kill_count": 5, "species": { "Rat - Ship": 1, "Rat": 4 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.04322633910394, -46.918371195042] }, "properties": { "traps": 1, "kill_count": 1, "species": { "Possum": 1 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05023310332606, -46.918371195042] }, "properties": { "traps": 1, "kill_count": 22, "species": { "Rat - Ship": 3, "Possum": 5, "Rat": 14 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.06191104369626, -46.916574588831196] }, "properties": { "traps": 1, "kill_count": 3, "species": { "Cat": 3 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.04789751525203, -46.9147779826204] }, "properties": { "traps": 1, "kill_count": 5, "species": { "Possum": 5 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.0525686914001, -46.9129813764096] }, "properties": { "traps": 1, "kill_count": 2, "species": { "Possum": 2 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.04789751525203, -46.918371195042] }, "properties": { "traps": 2, "kill_count": 2, "species": { "Deer": 2 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05490427947416, -46.918371195042] }, "properties": { "traps": 2, "kill_count": 31, "species": { "Rat - Ship": 7, "Rat": 10, "Possum": 14 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.0572398675482, -46.918371195042] }, "properties": { "traps": 2, "kill_count": 72, "species": { "Rat - Ship": 13, "Possum": 19, "Rat": 40 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05957545562222, -46.918371195042] }, "properties": { "traps": 2, "kill_count": 57, "species": { "Rat - Ship": 5, "Possum": 17, "Rat": 35 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.045561927178, -46.916574588831196] }, "properties": { "traps": 2, "kill_count": 1, "species": { "Possum": 1 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.045561927178, -46.9147779826204] }, "properties": { "traps": 2, "kill_count": 3, "species": { "Possum": 3 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.045561927178, -46.9129813764096] }, "properties": { "traps": 2, "kill_count": 1, "species": { "Possum": 1 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.06191104369626, -46.918371195042] }, "properties": { "traps": 3, "kill_count": 120, "species": { "Cat": 1, "Rat - Ship": 4, "Possum": 27, "Rat": 88 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.04322633910394, -46.9147779826204] }, "properties": { "traps": 3, "kill_count": 1, "species": { "Possum": 1 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.0525686914001, -46.918371195042] }, "properties": { "traps": 5, "kill_count": 9, "species": { "Possum": 3, "Rat": 3, "Rat - Ship": 3 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05023310332606, -46.916574588831196] }, "properties": { "traps": 6, "kill_count": 9, "species": { "Cat": 1, "Rat": 1, "Rat - Ship": 1, "Possum": 6 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.0525686914001, -46.9147779826204] }, "properties": { "traps": 6, "kill_count": 69, "species": { "Rat - Ship": 4, "Possum": 16, "Rat": 49 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05023310332606, -46.9147779826204] }, "properties": { "traps": 7, "kill_count": 32, "species": { "Rat": 15, "Possum": 17 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05490427947416, -46.9147779826204] }, "properties": { "traps": 8, "kill_count": 43, "species": { "Possum": 6, "Rat - Ship": 15, "Rat": 22 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05023310332606, -46.9129813764096] }, "properties": { "traps": 8, "kill_count": 29, "species": { "Rat - Ship": 3, "Possum": 8, "Rat": 18 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.04789751525203, -46.9129813764096] }, "properties": { "traps": 9, "kill_count": 23, "species": { "Cat": 1, "Rat": 5, "Rat - Ship": 5, "Possum": 12 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.05490427947416, -46.916574588831196] }, "properties": { "traps": 10, "kill_count": 126, "species": { "Bird": 1, "Rat - Ship": 12, "Cat": 14, "Possum": 30, "Rat": 69 } } },
+    { "geometry": { "type": "Point", "coordinates": [168.0525686914001, -46.916574588831196] }, "properties": { "traps": 33, "kill_count": 320, "species": { "Cat": 1, "Rat - Norway": 2, "Rat - Ship": 47, "Possum": 76, "Rat": 194 } } }
+  ]
+}

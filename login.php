@@ -16,6 +16,9 @@ require_once 'siteFunctions/masterPage.php';
 			$error='Your login credentials were rejected, please try again.';
 		} else {
 			$_SESSION['userID']=$userID;
+			$_SESSION['userName'] = $userName;
+
+			
 			echo "Session UserID after setting: " . $_SESSION['userID'];
 			header('Location: homePage.php');
 			exit;

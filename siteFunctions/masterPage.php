@@ -28,8 +28,10 @@ class MasterPage {
         session_start();  
 
         // Check if user ID is stored in session
-        if (isset($_SESSION['UserID'])) {
-            $this->userID = $_SESSION['UserID'];    
+        if (isset($_SESSION['userID'])) {
+            $this->userID = $_SESSION['userID'];  
+            $this->userName = $_SESSION['userName'] ?? null;
+ 
         }
 
     }
@@ -67,16 +69,20 @@ class MasterPage {
     
     private function getLoginPanel() {
         if ($this->userID == null) {
-            return '<a href="login.php" class="text-green-900 hover:text-green-600 duration-300">Login</a>';
+            return '<button type="submit" class="px-4 py-2 text-sm rounded-sm font-extrabold text-[#228B22] border hover:bg-[#222222] hover:text-white">
+                <a href="login.php" class="text-green-900 hover:text-green-600 duration-300">Login</a>
+            </button>';
         }
 
         // Generate role-specific login information
-        $html = '<span class="login">Logged in as <em>' . $this->userName . '</em></span>';
-        
-        $html .= '<a href="logout.php" class="text-green-900 hover:text-green-600 duration-300">Log out</a>';
-        $html .= '</span>';
-        
-        return $html;
+        return '
+        <span class="text-[black] font-bold hidden sm:block">Hello, ' . $this->userName . '</span>
+        <form action="logout.php" method="post" style="display:inline;">
+            <button type="submit" class="px-4 py-2 text-sm rounded-sm font-extrabold text-[#228B22] border hover:bg-[#222222] hover:text-white">
+                Log Out
+            </button>
+        </form>
+    ';
     }
 }
 

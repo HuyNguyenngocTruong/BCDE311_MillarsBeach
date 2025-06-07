@@ -5,7 +5,7 @@ function getConnection() {
 	$host = 'localhost' ;
 	$dbUser ='root';
 	$dbPass ='Truonghuy2212&';
-	$dbName ='AgoraDatabase';
+	$dbName ='MillarsBeach';
 
     // create a new database object and connect to server
 	$db = new MySQL($host, $dbUser, $dbPass, $dbName);
@@ -46,41 +46,39 @@ function getFromURL ($key) {
 }
 
 function sqlSafe ($input) {
-	$link = mysqli_connect('localhost', 'root', '', 'roombookings');
+	$link = mysqli_connect('localhost', 'root', 'Truonghuy2212&');
 	return mysqli_real_escape_string($link, stripslashes($input));
 }
 
-function getUserID($username, $password, $userType = 'buyer') {
-    $salt = 'muchsaltiness';
-    $username = sqlSafe($username);
-    $password = sqlSafe($password);
-    $passwordHash = hash('sha256', $password . $salt);
+function getUserID($username, $password) {
+    $s='muchsaltiness';
+	$u = sqlSafe($username);
+	$p = sqlSafe($password); 
+	$h = hash('sha256',$p.$s);
 
     $db = getDatabase();
-    $sql = "SELECT userID, passwordHash, businessAccountID FROM members WHERE login='$username' AND userType='$userType'";
+    $sql = "SELECT userID, password FROM userInfo WHERE userName='$username'";
     $result = $db->query($sql);
 
-    if ($result->size() == 1) {
-        $row = $result->fetch();
-        $storedHash = $row['passwordHash'];
-        $userID = $row['userID'];
-        $businessAccountID = $row['businessAccountID']; // Null if not connected to a business account
+	if ($result->size()==1) {
+		$row=$result->fetch();
+		$hash=$row['password'];
+		//echo $hash;
+		echo $hash;
+		echo $password;
+		$id=$row['userID'];
+		if ($h==$hash){
+			return $id;
+		}
+		
+		if (password_verify($password,$hash)){
+			return $id;
+		}
 
-        // Validate password hash
-        if ($passwordHash == $storedHash) {
-            // Check if user has a business account connected
-            if ($userType == 'seller' && $businessAccountID == null) {
-                // Optional: add a check or log message to inform the seller to connect a business account
-                echo "Warning: Seller profile is not connected to a business account.";
-            }
-            return $userID; // Return user ID if authentication is successful
-        }
-        // If password hash is missing, update it with the new hash and authenticate the user
-        if (empty($storedHash)) {
-            $updateSql = "UPDATE members SET passwordHash='$passwordHash' WHERE userID=$userID";
-            $db->query($updateSql);
-            return $userID;
-        }
-    }
+		if ($hash==null||$hash=="") {
+			$result=$db->query("UPDATE user SET password='$h' WHERE userID=$id");
+            return $id;
+		}
+	}
     return null; 
 }

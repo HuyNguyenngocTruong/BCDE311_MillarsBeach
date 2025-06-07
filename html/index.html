@@ -63,10 +63,12 @@
               </div>
       
               <div class="flex items-center ml-auto space-x-6">
-                <button class="px-4 py-2 text-sm rounded-sm font-extrabold text-[#228B22] border hover:bg-[#222222] hover:text-white"><a href="login.php">Sign
-                    In</a>
-                </button>
-
+                <!-- <button class="px-4 py-2 text-sm rounded-sm font-extrabold text-[#228B22] border hover:bg-[#222222] hover:text-white">
+                  <a href="login.php">
+                    ##login##
+                  </a>
+                </button> -->
+                ##login##
                 <button
                   class="px-4 py-2 text-sm rounded-sm font-extrabold text-white border bg-[#228B22] hover:bg-[#222222]"><a href="SignUp.php">Sign
                   up</a>
@@ -94,12 +96,12 @@
   
     <div>##content##</div>
 
-    <hr class="items-center w-[90%] mx-auto border-[#228B22] mt-4 mb-4">
+    <hr class="items-center w-[100%] mx-auto mt-4 mb-4">
 
 
     <!-- Sponsor -->
-    <div>
-        <h1 class="mb-4 mt-6 ml-2 text-2xl text-[#228B22] md:text-3xl lg:text-4xl text-center">
+    <div class="">
+        <h1 class="mb-6 mt-6 ml-2 text-2xl text-[#222222] font-bold md:text-3xl text-center">
             Project Partners
         </h1>
 
@@ -132,59 +134,24 @@
     </button>
 
         <script>
-            const navLinks = document.querySelector ('.nav-links');
-            const images = document.querySelectorAll('#carousel-images img');
-            const indicatorsContainer = document.getElementById('carousel-indicators');
-            let currentIndex = 0;
-            const carouselImages = document.getElementById("carousel-images");
-            const totalImages = carouselImages.children.length;
 
-            // Create dots based on number of images
-            images.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.className = 'h-3 w-3 rounded-full bg-gray-400 inline-block cursor-pointer';
-                if (index === 0) dot.classList.add('bg-green-500');
-                dot.addEventListener('click', () => goToSlide(index));
-                indicatorsContainer.appendChild(dot);
-            });
-
-            function updateIndicators() {
-                const dots = indicatorsContainer.children;
-                for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove('bg-green-500');
-                dots[i].classList.add('bg-gray-400');
-                }
-                dots[currentIndex].classList.add('bg-green-500');
-            }
-
-            function goToSlide(index) {
-                currentIndex = index;
-                const offset = -100 * currentIndex;
-                document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
-                updateIndicators();
-            }
-
-            function showSlide(index) {
-                const offset = index * -100;
-                carouselImages.style.transform = `translateX(${offset}%)`;
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % images.length;
-                goToSlide(currentIndex);
-            }
-
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                goToSlide(currentIndex);
-            }
-
-            setInterval(nextSlide, 5000);
-
+            const audio = document.getElementById("natureAudio");
+            const icon = document.getElementById("audioIcon");
+            const text = document.getElementById("audioText");
             // Audio
             function playAudio() {
-                const audio = document.getElementById('bgMusic');
+              if (audio.paused) {
                 audio.play();
+                icon.classList.remove("fa-play");
+                icon.classList.add("fa-pause");
+                text.textContent = "Click here to stop Tui Kaka chirping";
+              } else {
+                audio.pause();
+                audio.currentTime = 0; // optional: resets to beginning
+                icon.classList.remove("fa-pause");
+                icon.classList.add("fa-play");
+                text.textContent = "Click here to play the music";
+              }
             }
         </script>
 
@@ -236,6 +203,19 @@
         
             L.marker([-46.915999, 168.054889]).addTo(map).bindPopup("Millars Beach").openPopup();
         </script>
+
+        <script>
+          fetch('trapNZ.php')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('trapData').textContent = data;
+            })
+            .catch(error => {
+              document.getElementById('trapData').textContent = 'Error loading data.';
+              console.error(error);
+            });
+        </script>
+
     </body>
     
     <!-- Footer -->
@@ -249,10 +229,10 @@
               Subscribe to get the latest news, updates, and opportunities from Millars Beach.
             </p>
       
-            <form class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
+            <form action="subscribe.php" method="POST" class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
               <input 
-                type="email" 
-                placeholder="Enter your email" 
+                type="email"  name="email" id="email"
+                placeholder="Enter your email" required
                 class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#228B22] w-full" />
 
               <button 

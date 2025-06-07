@@ -2,37 +2,33 @@
 	include_once 'siteFunctions/commonFunctions.php';
 	include_once 'siteFunctions/masterPage.php';
 	require_once 'framework/htmlTemplate.php';
-    $page = new MasterPage();
-    
+  $page = new MasterPage();
+  include 'trapNZ.php'; 
+
 
 $content = "
 
-<!-- Carousel Section -->
-<section class='w-[90%] mx-auto mt-10'>
-  <div class='relative mx-auto overflow-hidden rounded-xl w-full max-w-3xl'>
-    <div id='carousel-images' class='flex transition-transform duration-700 ease-in-out'>
-      <img src='img/Example.jpeg' class='w-full flex-shrink-0' />
-      <img src='img/Example.jpeg' class='w-full flex-shrink-0' />
-      <img src='img/Example.jpeg' class='w-full flex-shrink-0' />
-    </div>
+<!-- Hero Section -->
+<section class='relative w-full h-[80vh] bg-cover bg-center bg-no-repeat' style='background-image: url(\"img/IMG_sunrise.jpeg\");'>
+  <!-- Overlay -->
+  <div class='absolute inset-0 bg-black bg-opacity-40'></div>
 
-    <!-- Navigation buttons -->
-    <button onclick='prevSlide()' class='absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-green-500 hover:text-white'>
-      <i class='fa-solid fa-chevron-left'></i>
-    </button>
-    <button onclick='nextSlide()' class='absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-green-500 hover:text-white'>
-      <i class='fa-solid fa-chevron-right'></i>
-    </button>
-
-    <div id='carousel-indicators' class='flex justify-center mt-4 gap-2'>
-      <!-- Dots will be inserted dynamically -->
-    </div>
+  <!-- Text Content -->
+  <div class='relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4'>
+    <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold mb-4'>
+      Welcome to Millars Beach Island
+    </h1>
+    <p class='max-w-2xl text-lg md:text-xl text-gray-200'>
+      A sanctuary for native wildlife, protected by community and conservation.
+    </p>
   </div>
 </section>
 
+
+
 <!-- About Section -->
 <section class='w-[80%] items-center mx-auto mt-10'>
-  <h1 class='mb-4 mt-6 ml-2 text-2xl text-[#228B22] md:text-3xl lg:text-4xl text-center'>
+  <h1 class='mb-4 mt-6 ml-2 text-2xl text-[#222222] font-bold md:text-3xl lg:text-4xl text-center'>
     Welcome to Millars Beach Island
   </h1>
 
@@ -51,7 +47,7 @@ $content = "
 
 <!-- Signature Wildlife Section -->
 <section class='mt-10'>
-  <h1 class='mb-6 text-2xl text-[#228B22] md:text-3xl lg:text-4xl text-center'>
+  <h1 class='mb-6 text-2xl text-[#222222] font-bold md:text-3xl lg:text-4xl text-center'>
     Signature Wildlife 
   </h1>
 
@@ -59,7 +55,7 @@ $content = "
     
     <!-- Wildlife Card -->
     <div class='border rounded-md shadow-sm overflow-hidden bg-white'>
-      <img src='img/Example.jpeg' alt='Frogs' class='w-full h-48 object-cover' />
+      <img src='img/IMG_sunrise.jpeg' alt='Frogs' class='w-full h-48 object-cover' />
       <div class='p-4'>
         <h2 class='text-lg font-semibold text-gray-900'>Exploring Nature: Spring Frogs</h2>
         <p class='text-sm text-gray-600 mt-1'>
@@ -71,7 +67,7 @@ $content = "
 
     <!-- Wildlife Card -->
     <div class='border rounded-md shadow-sm overflow-hidden bg-white'>
-      <img src='img/Example.jpeg' alt='Wildflowers' class='w-full h-48 object-cover' />
+      <img src='img/Millars shelter pip.jpg' alt='Wildflowers' class='w-full h-48 object-cover' />
       <div class='p-4'>
         <h2 class='text-lg font-semibold text-gray-900'>
           Bloom and Bust: Climate Effects on Wildflowers
@@ -85,7 +81,7 @@ $content = "
 
     <!-- Wildlife Card -->
     <div class='border rounded-md shadow-sm overflow-hidden bg-white'>
-      <img src='img/Example.jpeg' alt='Solace Flower' class='w-full h-48 object-cover' />
+      <img src='img/IMG_boardwalk.jpeg' alt='Solace Flower' class='w-full h-48 object-cover' />
       <div class='p-4'>
         <h2 class='text-lg font-semibold text-gray-900'>
           Wildflower Watching as Solace
@@ -98,15 +94,51 @@ $content = "
     </div>
 
   </div>
+
+  <!-- Signature Wildlife Footage -->
+  <div class='w-full mt-10 mb-6 flex flex-col items-center'>
+    <h1 class='text-2xl md:text-3xl text-[#222222] font-bold mb-6 text-center'>
+      Footage of Kiwi in the Wild
+    </h1>
+    <video class='w-full md:w-3/4 lg:w-2/3 rounded shadow-lg' controls>
+      <source src='video/VID_Kiwi01.mp4' type='video/mp4'>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+
+</section>
+
+<!-- Trap Statistics Section -->
+<section class='py-6 bg-white text-center'>
+  <div class='max-w-5xl mx-auto px-6'>
+    <h1 class='mb-4 mt-6 text-2xl text-[#222222] font-bold md:text-3xl lg:text-4xl'>
+      Latest Trap Statistics
+    </h1>
+
+    <p class='mb-6 text-[#444444] text-base leading-relaxed'>
+      Our efforts continue to keep traps active and effective in preserving native wildlife.
+    </p>
+
+    <div class='grid grid-cols-1 sm:grid-cols-1 gap-6'>
+      <!-- Total Traps Card -->
+      <div class='flex flex-col items-center justify-center bg-white border shadow-md rounded-lg p-6'>
+        <img src='img/trap.jpg' alt='Trap icon' class='w-16 h-16 object-cover rounded-md mb-4'>
+        <p class='text-lg font-semibold text-gray-700'>Total Traps</p>
+        <p class='text-3xl font-extrabold text-gray-900 mt-1'>$totalTraps</p>
+      </div>
+    </div>
+
+    <p class='mt-6 text-sm font-semibold text-gray-600'>Sourced from Trap.nz</p>
+  </div>
 </section>
 
 
-
-
 <!-- Nature Needs You Section -->
-<section class='py-8 bg-white text-center'>
+<section class='py-6 bg-white text-center'>
   <div class='max-w-5xl mx-auto px-6'>
-    <h1 class='mb-4 mt-6 ml-2 text-2xl text-[#228B22] md:text-3xl lg:text-4xl text-center'>
+    <h1 class='mb-4 mt-4 ml-2 text-2xl text-[#222222] font-bold md:text-3xl lg:text-4xl text-center'>
       Nature Needs You
     </h1>
 
@@ -116,16 +148,16 @@ $content = "
 
     <div class='grid grid-cols-1 sm:grid-cols-2 gap-6'>
       <!-- Card 1 -->
-      <a href='ContactUs.php' class='relative h-64 rounded overflow-hidden shadow-md group'>
-        <img src='img/Example2.jpg' alt='Volunteer' class='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'>
+      <a href='ContactUs.php#volunteer' class='relative h-64 rounded overflow-hidden shadow-md group'>
+        <img src='img/IMG_1619.HEIC' alt='Volunteer' class='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'>
         <div class='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
           <h3 class='text-white text-xl font-semibold'>Volunteer</h3>
         </div>
       </a>
 
       <!-- Card 2 -->
-      <a href='ContactUs.php' class='relative h-64 rounded overflow-hidden shadow-md group'>
-        <img src='img/Example2.jpg' alt='Donate to Our Mission' class='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'>
+      <a href='Donate.php' class='relative h-64 rounded overflow-hidden shadow-md group'>
+        <img src='img/DJI_0035.JPG' alt='Donate to Our Mission' class='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'>
         <div class='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
           <h3 class='text-white text-xl font-semibold text-center px-2'>Donate to Our Mission</h3>
         </div>
